@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+.font-nunito-sm {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+.font-nunito-md {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+}
+.font-nunito-lg {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
+.font-nunito-xl {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 48px;
+	font-weight: 700;
+}
+
+@media (max-width: 768px) {
+	.font-nunito-xl {
+		font-size: 32px;
+	}
+	.font-nunito-lg {
+		font-size: 18px;
+	}
+	.font-nunito-md {
+		font-size: 16px;
+	}
+}
