@@ -17,8 +17,16 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 const dataForTravel = [
 	{ title: "Manali", subtitle: "4days for 23,999/-", image: Manali },
-	{ title: "Shimla", subtitle: "4 Days for 23,999Rs/-", image: Shimla },
-	{ title: "Leh/Ladhak", subtitle: "4 Days for 23,999Rs/-", image: Ladakh },
+	{
+		title: "Shimla",
+		subtitle: "Tours available, please do contact",
+		image: Shimla,
+	},
+	{
+		title: "Leh/Ladhak",
+		subtitle: "Tours available, please do contact",
+		image: Ladakh,
+	},
 
 	{
 		title: "Delhi (Shared)",
