@@ -11,10 +11,11 @@ import Delhi from "./assets/Delhi.webp";
 
 import Travel from "./components/Travel";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
+import { setMetaTags } from "./components/Seo";
 const dataForTravel = [
 	{ title: "Manali", subtitle: "4 days for 23,999/-", image: Manali },
 	{
@@ -97,6 +98,40 @@ function App() {
 	const scrollToId = (id: string) => {
 		document.getElementById(id)?.scrollIntoView();
 	};
+
+	useEffect(() => {
+		const structuredData = {
+			"@context": "http://schema.org",
+			"@type": "TravelAgency",
+			name: "Verma Travel",
+			url: "https://vermatravel.com",
+			logo: "https://vermatravel.com/Flight.svg",
+			sameAs: ["https://www.facebook.com/p/Verma-Travels-100066727214727/"],
+			address: {
+				"@type": "PostalAddress",
+				streetAddress: "Opposite to Rohit Automobile",
+				addressLocality: "Yamunanagar",
+				addressRegion: "HR",
+				postalCode: "135001",
+				addressCountry: "IN",
+			},
+			contactPoint: {
+				"@type": "ContactPoint",
+				telephone: "+91-9017158692",
+				contactType: "Customer Owner",
+			},
+		};
+
+		setMetaTags({
+			title: "Travel Services in Yamunanagar | Verma Travels",
+			description:
+				"Explore the best travel services in Yamunanagar. Book your trips, tours, and travel services with Verma Travels.",
+			keywords:
+				"travel services, Yamunanagar, tours, trips, travel agency, shimla, manali, delhi, new delhi, himachal pradesh, holiday, cabs",
+			canonicalUrl: "https://vermatravel.com",
+			structuredData: structuredData,
+		});
+	}, []);
 
 	return (
 		<>
