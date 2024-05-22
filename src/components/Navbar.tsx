@@ -1,4 +1,4 @@
-import LogoImgage from "../assets/flight.png";
+import LogoImgage from "../assets/flight.webp";
 
 const Navbar = () => {
 	return (
@@ -9,7 +9,7 @@ const Navbar = () => {
 			>
 				<img
 					src={LogoImgage}
-					className="w-[48px]"
+					className="h-[64px] mix-blend-multiply contrast-100"
 					loading="lazy"
 					alt="verma-travels-icon"
 				></img>

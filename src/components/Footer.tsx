@@ -1,7 +1,20 @@
+import { useState } from "react";
+import Modal from "react-responsive-modal";
+
 const Footer = () => {
 	const handleSubmit = () => {};
+	const [showContactModal, setShowContactModal] = useState(false);
+
 	return (
 		<>
+			<Modal
+				open={showContactModal}
+				onClose={() => setShowContactModal(false)}
+				center
+			>
+				<header className="font-nunito-lg">Contact Details:</header>
+				<h4 className="font-nunito-md">Verma Travels: +91-9017158692</h4>
+			</Modal>
 			<main
 				id="contact"
 				className="container max-w-screen-2xl w-screen flex  flex-col justify-between items-center md:items-start
@@ -9,6 +22,7 @@ bg-slate-100 pt-[10px] mb-[20px]"
 			>
 				<div className="w-[95vw] flex flex-col md:flex-row items-strech justify-between mx-auto">
 					<form
+						onClick={() => setShowContactModal(true)}
 						className="max-w-md bg-white p-6  rounded-lg shadow-md flex flex-col w-full mb-[20px] md:w-[45%]"
 						onSubmit={handleSubmit}
 					>
@@ -68,7 +82,7 @@ bg-slate-100 pt-[10px] mb-[20px]"
 						</div>
 						<input
 							type="submit"
-							className="w-full px-4 py-2 mt-2 font-nunito-md text-white bg-sky-500 hover:bg-sky-600 rounded-md shadow-lg"
+							className="w-full px-4 py-2 mt-2 font-nunito-md text-white bg-sky-700 hover:bg-sky-600 rounded-md shadow-lg"
 						/>
 					</form>
 					<div className="w-full md:w-[50%] rounded flex items-center justify-center bg-white shadow-lg p-2">
