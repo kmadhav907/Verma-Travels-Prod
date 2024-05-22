@@ -1,4 +1,4 @@
-import LogoImgage from "../assets/flight.webp";
+import LogoImgage from "../assets/Flight.webp";
 
 const Navbar = () => {
 	return (
