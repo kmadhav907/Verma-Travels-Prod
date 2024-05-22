@@ -2,7 +2,7 @@ import TravelImage from "../assets/Travel.webp";
 const Travel = (props: any) => {
 	return (
 		<div
-			className="relative isolate flex flex-col justify-end overflow-hidden aspect-square h-[80vw]  rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto mt-24 md:w-[45%] md:h-[40vh]cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
+			className="relative isolate flex flex-col justify-end overflow-hidden aspect-square h-[80vw]  rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto mt-24 md:w-[45%] md:h-[300px] cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
 			onClick={() => {
 				props.openModal(props.index);
 			}}
