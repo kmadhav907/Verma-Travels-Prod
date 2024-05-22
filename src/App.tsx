@@ -16,16 +16,28 @@ import { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 const dataForTravel = [
-	{ title: "Manali", subtitle: "4days for 23,999/-", image: Manali },
+	{ title: "Manali", subtitle: "4 days for 23,999/-", image: Manali },
 	{
 		title: "Shimla",
 		subtitle: "Tours available, please do contact",
 		image: Shimla,
+		bulletPoints: [
+			"6,000Rs per day for Innova",
+			"5,500Rs per day for Ertiga",
+			"4,500Rs per day for Sedan",
+			"Minimum 2 days compulsory",
+		],
 	},
 	{
 		title: "Leh/Ladhak",
 		subtitle: "Tours available, please do contact",
 		image: Ladakh,
+		bulletPoints: [
+			"6,000Rs per day for Innova",
+			"5,500Rs per day for Ertiga",
+			"4,500Rs per day for Sedan",
+			"Minimum 7 days compulsory",
+		],
 	},
 
 	{
