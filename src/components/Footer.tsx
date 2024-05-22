@@ -101,6 +101,7 @@ bg-slate-100 pt-[10px] mb-[20px]"
 			<footer className="bg-gray-800 text-white p-4">
 				<div className="max-w-xl mx-auto text-center">
 					<p>&copy; 2024 Verma Travels. All rights reserved.</p>
+					<p>For more information, Contact Us: +91-9017158692</p>
 				</div>
 			</footer>
 		</>
