@@ -1,6 +1,6 @@
 import "./App.css";
 import HeroImage from "./assets/HeroImage.webp";
-import PostCard from "./assets/postcard.webp";
+import PostCard from "./assets/Postcard.webp";
 import Ladakh from "./assets/Ladakh.webp";
 import Manali from "./assets/Manali.webp";
 import Shimla from "./assets/Shimla.webp";
