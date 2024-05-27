@@ -17,8 +17,8 @@ const Footer = () => {
 			</Modal>
 			<main
 				id="contact"
-				className="container max-w-screen-2xl w-screen flex  flex-col justify-between items-center md:items-start
-bg-slate-100 pt-[10px] mb-[20px]"
+				className="container max-w-screen-2xl w-screen flex  flex-col justify-between items-center md:items-start mt-10
+bg-slate-200 pt-[10px] pb-[20px]"
 			>
 				<div className="w-[95vw] flex flex-col md:flex-row items-strech justify-between mx-auto">
 					<form

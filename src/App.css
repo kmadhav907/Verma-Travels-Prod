@@ -1,3 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#root {
+	max-width: calc(100vw - 1px);
+}
 .react-responsive-modal-modal {
 	border-radius: 10px;
 }
@@ -12,4 +20,14 @@
 	--p: 100%;
 	--t: 0.3s;
 	color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+	.nav-link {
+		background: white !important;
+		padding: 5px !important;
+	}
+	.nav-link:hover {
+		color: black;
+	}
 }

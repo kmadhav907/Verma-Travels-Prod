@@ -167,7 +167,7 @@ function App() {
 
 					<div className="md:max-w-[100vw] md:min-h-[300px] flex items-center justify-center flex-col p-4">
 						<h1 className="font-nunito-xl max-w-[100%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-							Verma Travels
+							Discover North India with Verma Travels
 						</h1>
 						<h3 className="font-nunito-md max-w-[100%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 							With a fleet of modern vehicles and professional drivers, we
@@ -254,17 +254,6 @@ function App() {
 							</Modal>
 						)}
 					</div>
-				</div>
-				<div
-					id="exploreDestination"
-					className="flex mt-[20px] md:mt-[100px] items-center justify-center flex-col md:w-[100vw] w-screen p-2 md:p-8 mb-[20px]"
-				>
-					<h1 className="font-nunito-xl max-w-[100%] text-center">
-						Discover North India with Verma Travels
-					</h1>
-					<button className="font-nunito-md shadow-lg bg-orange-500 hover:bg-orange-600 md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0">
-						Plan your trip now
-					</button>
 				</div>
 			</main>
 		</>
