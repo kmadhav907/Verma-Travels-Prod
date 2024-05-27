@@ -3,8 +3,18 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-#root {
-	max-width: calc(100vw - 1px);
+html {
+	scrollbar-width: none;
+	max-width: 100vw;
+	width: 100vw;
+}
+
+body::-webkit-scrollbar {
+	width: 0 !important;
+}
+body {
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
 }
 .react-responsive-modal-modal {
 	border-radius: 10px;
