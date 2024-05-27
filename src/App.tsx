@@ -1,5 +1,4 @@
 import "./App.css";
-import HeroImage from "./assets/HeroImage.webp";
 import PostCard from "./assets/Postcard.webp";
 import Ladakh from "./assets/Ladakh.webp";
 import Manali from "./assets/Manali.webp";
@@ -8,7 +7,7 @@ import Airport from "./assets/Airport.webp";
 import CharDham from "./assets/CharDham.webp";
 import Chandigarh from "./assets/Chandigarh.webp";
 import Delhi from "./assets/Delhi.webp";
-
+import TaxiMobile from "./assets/TaxiMobile.jpeg";
 import Travel from "./components/Travel";
 
 import { useEffect, useState } from "react";
@@ -17,7 +16,17 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { setMetaTags } from "./components/Seo";
 const dataForTravel = [
-	{ title: "Manali", subtitle: "4 days for 23,999/-", image: Manali },
+	{
+		title: "Manali",
+		subtitle: "4 days for 23,999/-",
+		image: Manali,
+		bulletPoints: [
+			"6,000Rs per day for Innova",
+			"5,500Rs per day for Ertiga",
+			"4,500Rs per day for Sedan",
+			"Minimum 4 days compulsory",
+		],
+	},
 	{
 		title: "Shimla",
 		subtitle: "Tours available, please do contact",
@@ -135,33 +144,43 @@ function App() {
 
 	return (
 		<>
-			<main className="container max-w-screen-2xl w-screen flex bg-white flex-col min-h-screen justify-between md:items-start p-0">
+			<main className="container max-w-screen-2xl w-screen flex flex-col min-h-screen justify-between md:items-start p-0">
 				<div
-					className="w-[95vw] flex mt-11 items-center md:justify-between mx-auto flex-col md:flex-row md:mt-[100px]"
+					className="w-[100vw] h-[100vh] flex  items-center pt-10 md:pt-0 justify-start md:justify-center mx-auto flex-col md:flex-row relative"
 					id="herosection"
 				>
-					<div className="md:max-w-[45%] md:min-h-[300px] flex items-start justify-center flex-col max-w-screen-md">
-						<h1 className="font-nunito-xl max-w-[100%]">Verma Travels</h1>
-						<h3 className="font-nunito-md max-w-[100%]">
+					<img
+						className="hidden
+						absolute top-0 left-0 h-[100vh] w-[100vw] object-cover blur-[4px] -z-10 md:block"
+						src={TaxiMobile}
+						loading="lazy"
+						alt="Web Image for verma travels"
+					></img>
+					<img
+						className="md:hidden 
+					absolute top-0 left-0 object-cover blur-[2px] -z-10
+					h-[100vh] w-[100vw]"
+						src={TaxiMobile}
+						alt="Mobile Image for verma travels"
+						loading="lazy"
+					></img>
+
+					<div className="md:max-w-[100vw] md:min-h-[300px] flex items-center justify-center flex-col p-4">
+						<h1 className="font-nunito-xl max-w-[100%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+							Verma Travels
+						</h1>
+						<h3 className="font-nunito-md max-w-[100%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 							With a fleet of modern vehicles and professional drivers, we
 							strive to make every ride with us a pleasant experience.
 						</h3>
 						<button
-							className="font-nunito-md shadow-lg bg-sky-700 hover:bg-sky-600  md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0"
+							className="font-nunito-md shadow-lg bg-orange-500 hover:bg-orange-600  md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0"
 							onClick={() => {
 								scrollToId("explore");
 							}}
 						>
 							Explore Destinations
 						</button>
-					</div>
-					<div className="md:max-w-[50%]  h-[400px] md:w-[50%] flex items-center justify-center">
-						<img
-							src={HeroImage}
-							alt="Hero Image"
-							loading="lazy"
-							className="object-cover"
-						></img>
 					</div>
 				</div>
 				<div
@@ -183,7 +202,7 @@ function App() {
 							all your transportation needs.
 						</h3>
 						<button
-							className="font-nunito-md shadow-lg bg-sky-700 hover:bg-sky-600  md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0"
+							className="font-nunito-md shadow-lg bg-orange-500 hover:bg-orange-600  md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0"
 							onClick={() => {
 								scrollToId("contact");
 							}}
@@ -217,18 +236,20 @@ function App() {
 								center
 							>
 								<div className="">
-									<header className="font-nunito-lg mb-3">Hello there!</header>
-									<p className="font-nunito-md">
-										Hey, thanks for having interest in&nbsp;
+									<header className="font-nunito-lg text-size-md">
 										{dataForTravel[modalState.dataIndex].title}
-									</p>
+									</header>
+
 									<ul className="mt-1 mb-1 p-3 list-disc">
 										{dataForTravel[modalState.dataIndex].bulletPoints?.map(
 											(ele) => (
-												<li>{ele}</li>
+												<li className="font-nunito-md">{ele}</li>
 											)
 										)}
 									</ul>
+									<p className="font-nunito-md text-slate-700">
+										Thank you for visiting! Contact us for more adventures.
+									</p>
 								</div>
 							</Modal>
 						)}
@@ -241,7 +262,7 @@ function App() {
 					<h1 className="font-nunito-xl max-w-[100%] text-center">
 						Discover North India with Verma Travels
 					</h1>
-					<button className="font-nunito-md shadow-lg bg-sky-700 hover:bg-sky-600  md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0">
+					<button className="font-nunito-md shadow-lg bg-orange-500 hover:bg-orange-600 md:flex-row rounded-md text-white px-4 py-2 mt-4 mx-auto md:mx-0">
 						Plan your trip now
 					</button>
 				</div>

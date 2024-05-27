@@ -82,7 +82,7 @@ bg-slate-100 pt-[10px] mb-[20px]"
 						</div>
 						<input
 							type="submit"
-							className="w-full px-4 py-2 mt-2 font-nunito-md text-white bg-sky-700 hover:bg-sky-600 rounded-md shadow-lg"
+							className="w-full px-4 py-2 mt-2 font-nunito-md text-white bg-orange-500 hover:bg-orange-600 rounded-md shadow-lg"
 						/>
 					</form>
 					<div className="w-full md:w-[50%] rounded flex items-center justify-center bg-white shadow-lg p-2">
